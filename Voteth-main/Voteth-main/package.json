@@ -1,0 +1,65 @@
+{
+  "name": "voteth-2.0",
+  "version": "0.1.0",
+  "description": "VotEth 2.0 — Production-grade blockchain-anchored digital voting platform",
+  "private": true,
+  "author": "VotEth Principal Engineering Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/voteth-2.0.git"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "workspaces": [
+    "frontend",
+    "contracts"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=frontend",
+    "test": "npm run test --workspace=frontend && npm run test --workspace=contracts",
+    "test:frontend": "npm run test --workspace=frontend",
+    "test:contracts": "npm run test --workspace=contracts",
+    "lint": "npm run lint --workspace=frontend",
+    "typecheck": "npm run typecheck --workspace=frontend",
+    "compile:contracts": "npm run compile --workspace=contracts",
+    "prepare": "node -e \"if (process.env.NODE_ENV !== 'production' && !process.env.CI) { try { require('child_process').execSync('husky', { stdio: 'inherit' }); } catch (e) {} }\""
+  },
+  "devDependencies": {
+    "husky": "^9.x",
+    "@commitlint/cli": "^19.x",
+    "@commitlint/config-conventional": "^19.x"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "scope-enum": [
+        2,
+        "always",
+        [
+          "auth",
+          "elections",
+          "candidates",
+          "voting",
+          "blockchain",
+          "ai",
+          "analytics",
+          "qr",
+          "orgs",
+          "rls",
+          "schema",
+          "config",
+          "ci",
+          "docs",
+          "architecture"
+        ]
+      ],
+      "subject-max-length": [2, "always", 72]
+    }
+  }
+}

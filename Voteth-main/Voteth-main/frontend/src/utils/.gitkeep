@@ -1,0 +1,3 @@
+# Stateless helper/utility functions
+# Examples: formatAddress, truncateHash, dateHelpers, validationHelpers
+# Keep functions pure and well-typed

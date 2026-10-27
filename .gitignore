@@ -1,0 +1,112 @@
+# =============================================================================
+# Root .gitignore for VotEth & Blockchain Voting System
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Secrets & Environment Variables (NEVER commit real credentials)
+# -----------------------------------------------------------------------------
+.env
+.env.*
+.env.local
+.env.*.local
+.env.development
+.env.staging
+.env.production
+*.env
+*.env.local
+
+# Allow example templates
+!.env.example
+!**/.env.example
+
+# Private keys, certificates, keystores
+*.pem
+*.key
+*.pfx
+*.keystore
+id_rsa
+id_rsa.pub
+
+# -----------------------------------------------------------------------------
+# Dependency Directories
+# -----------------------------------------------------------------------------
+node_modules/
+**/node_modules/
+.npm
+.yarn/cache
+.yarn/unplugged
+.pnp
+.pnp.*
+
+# -----------------------------------------------------------------------------
+# Build Outputs
+# -----------------------------------------------------------------------------
+dist/
+**/dist/
+build/
+**/build/
+out/
+**/out/
+bundle/
+**/bundle/
+.vite/
+**/.vite/
+.vercel
+**/.vercel
+
+# -----------------------------------------------------------------------------
+# Blockchain / Hardhat / Foundry Outputs
+# -----------------------------------------------------------------------------
+artifacts/
+**/artifacts/
+cache/
+**/cache/
+typechain-types/
+**/typechain-types/
+types/
+**/types/
+coverage/
+**/coverage/
+coverage.json
+**/coverage.json
+.gas-snapshot
+**/.gas-snapshot
+snapshots/
+**/snapshots/
+
+# -----------------------------------------------------------------------------
+# Logs & Testing Artifacts
+# -----------------------------------------------------------------------------
+*.log
+**/*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.nyc_output/
+**/.nyc_output/
+test-results/
+**/test-results/
+playwright-report/
+**/playwright-report/
+.vitest/
+**/.vitest/
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# -----------------------------------------------------------------------------
+# OS & Editor Metadata
+# -----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.sublime-project
+*.sublime-workspace

@@ -1,0 +1,180 @@
+# =============================================================================
+# VotEth 2.0 — .gitignore
+# Covers: Node.js, Hardhat, Supabase, Vite, Tailwind, IDE noise, secrets
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Secrets & Environment Variables
+# NEVER commit real environment files. Only .env.example is committed.
+# -----------------------------------------------------------------------------
+.env
+.env.local
+.env.development
+.env.staging
+.env.production
+.env.*.local
+*.pem
+*.key
+
+# -----------------------------------------------------------------------------
+# Node.js
+# -----------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.npm
+.yarn
+.pnp.*
+package-lock.json
+
+# Keep package-lock if you choose to commit it — remove line above if so.
+
+# -----------------------------------------------------------------------------
+# Build Outputs
+# -----------------------------------------------------------------------------
+dist/
+build/
+out/
+
+# Vite build output
+frontend/dist/
+frontend/.vite/
+
+# -----------------------------------------------------------------------------
+# Hardhat / Solidity Toolchain
+# Artifacts and cache are generated build products — not authored code.
+# -----------------------------------------------------------------------------
+contracts/artifacts/
+contracts/cache/
+contracts/typechain-types/
+contracts/coverage/
+contracts/coverage.json
+
+# Hardhat Ignition deployment files (keep deployments directory if desired)
+contracts/ignition/deployments/
+
+# -----------------------------------------------------------------------------
+# Supabase
+# -----------------------------------------------------------------------------
+supabase/.branches/
+supabase/.temp/
+
+# -----------------------------------------------------------------------------
+# Testing & Coverage
+# -----------------------------------------------------------------------------
+coverage/
+*.lcov
+.nyc_output/
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Vitest cache
+.vitest/
+
+# -----------------------------------------------------------------------------
+# TypeScript
+# -----------------------------------------------------------------------------
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# -----------------------------------------------------------------------------
+# Logs
+# -----------------------------------------------------------------------------
+logs/
+*.log
+pids/
+*.pid
+*.pid.lock
+
+# -----------------------------------------------------------------------------
+# Operating System
+# -----------------------------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptorec
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+
+# -----------------------------------------------------------------------------
+# IDE & Editor
+# -----------------------------------------------------------------------------
+
+# VS Code — keep .vscode/settings.json and extensions.json for team consistency
+# but ignore personal/runtime files
+.vscode/settings.json
+.vscode/*.code-snippets
+.history/
+*.vsix
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*#
+.#*
+
+# -----------------------------------------------------------------------------
+# Miscellaneous
+# -----------------------------------------------------------------------------
+
+# Generated docs
+docs/_generated/
+
+# AI Engineering — evals may contain sensitive prompt outputs
+ai-engineering/evals/outputs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# -----------------------------------------------------------------------------
+# Package Manager Locks
+# Commit the lock file for the package manager you standardize on.
+# VotEth standardizes on npm. Remove line below if committing package-lock.json
+# -----------------------------------------------------------------------------
+# package-lock.json  # <- Uncomment to commit npm lockfile (recommended)
+
+.vercel
+.env*
+temp_search*.txt
+temp_transcript_search.txt
+*.skill/
+
+.vercel
+.env*

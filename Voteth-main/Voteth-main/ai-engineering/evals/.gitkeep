@@ -1,0 +1,2 @@
+# Prompt/output regression testing artifacts
+# Sensitive eval outputs belong in evals/outputs/ which is gitignored

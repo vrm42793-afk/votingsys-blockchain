@@ -1,0 +1,49 @@
+# VotEth 2.0 UI/UX Redesign Implementation Tasks
+
+- [x] Task 1: Styling System, Theme Colors, & Lucide Icons Upgrade
+  - [x] Redefine theme variables in `index.css`
+  - [x] Update theme extension in `tailwind.config.ts`
+  - [x] Install missing icon libraries or verify `lucide-react` is used globally
+- [x] Task 2: Layout & Navigation Overhaul (`DashboardLayout.tsx`)
+  - [x] Sticky Header with ☰ and Logo
+  - [x] Collapsible drawer navigation (Tablet & Mobile)
+  - [x] Floating Bottom Navigation Bar (Mobile)
+  - [x] Notifications Bell with Dropdown Menu
+  - [x] Refined Wallet Widget in sidebar
+- [x] Task 3: Dashboard Redesign (`DashboardPage.tsx`)
+  - [x] Greeting "Hello VR 👋"
+  - [x] Summary stats cards
+  - [x] Quick actions grid
+  - [x] Timeline-based recent activity cards
+- [x] Task 4: Organizer Dashboard Redesign (`AdminPage.tsx`)
+  - [x] Top cards for statistics
+  - [x] Blockchain status indicator
+  - [x] Grid of elections/analytics
+- [x] Task 5: Election Wizard Form (`CreateElectionPage.tsx`)
+  - [x] Implement 4-step wizard
+  - [x] Step 1: Basic info
+  - [x] Step 2: Election Type
+  - [x] Step 3: Date, Timezone & Chain selection
+  - [x] Step 4: Review & Submit
+  - [x] Add visual progress indicator `1 ── 2 ── 3 ── 4`
+- [x] Task 6: Election & Candidate Cards (`ElectionsPage.tsx` and candidate views)
+  - [x] Redesign lists to grid cards on `ElectionsPage.tsx`
+  - [x] Implement Candidate Cards with bio, avatar, and AI summaries
+- [x] Task 7: Google Forms Style Ballot (`VotePage.tsx`)
+  - [x] Clean layout for voting option selections
+  - [x] Single choice (radio), multiple choice (checkbox), ranked choice styles
+- [x] Task 8: Digital Vote Receipt (`VoteReceiptPage.tsx`)
+  - [x] Printable layout card
+  - [x] Details: Transaction hash, block number, election metadata, timestamps
+  - [x] PDF Download and Block Explorer buttons
+- [x] Task 9: Members Panel & Org Settings Redesigns
+  - [x] Redesign members list (`ManageMembersPage.tsx`) to cards on mobile
+  - [x] Tabbed configuration interface on `OrgSettingsPage.tsx`
+- [x] Task 10: General UI enhancements (Forms, Buttons, Skeletons, Animations)
+  - [x] Forms styling, spacing, full-width mobile buttons
+  - [x] Skeleton loading states
+  - [x] Empty illustration states
+  - [x] PWA setup (`vite.config.ts`, manifest)
+- [x] Task 11: Build and Run Verification
+  - [x] Run typecheck and compile
+  - [x] Verify pages responsive rendering

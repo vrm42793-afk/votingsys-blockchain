@@ -1,0 +1,30 @@
+{
+  "name": "decentralized-voting-system",
+  "version": "1.0.0",
+  "description": "This project showcases a Hardhat 3 project using the native Node.js test runner (`node:test`) and the `viem` library for Ethereum interactions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.2",
+    "chai": "^6.2.2",
+    "hardhat": "^2.28.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.6.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "ethers": "^6.16.0",
+    "express": "^5.2.1",
+    "mongoose": "^9.6.3",
+    "multer": "^2.1.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "type": "commonjs"
+}

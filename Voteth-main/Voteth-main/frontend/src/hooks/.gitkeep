@@ -1,0 +1,3 @@
+# Custom React hooks for behavior reuse across features
+# Examples: useAuth, useWallet, useElection, useDebounce
+# Volume IV, Chapter 14 implements shared hooks

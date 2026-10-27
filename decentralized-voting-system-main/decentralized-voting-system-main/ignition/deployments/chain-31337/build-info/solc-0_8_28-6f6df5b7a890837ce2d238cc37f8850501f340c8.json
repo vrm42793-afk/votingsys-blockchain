@@ -1,0 +1,49 @@
+{
+  "_format": "hh3-sol-build-info-1",
+  "id": "solc-0_8_28-6f6df5b7a890837ce2d238cc37f8850501f340c8",
+  "solcVersion": "0.8.28",
+  "solcLongVersion": "0.8.28+commit.7893614a",
+  "compilerType": "solc",
+  "toolVersions": {
+    "hardhat": "3.7.0"
+  },
+  "userSourceNameMap": {
+    "contracts/Voting.sol": "project/contracts/Voting.sol"
+  },
+  "input": {
+    "language": "Solidity",
+    "settings": {
+      "evmVersion": "cancun",
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "": [
+            "ast"
+          ],
+          "*": [
+            "abi",
+            "evm.bytecode.linkReferences",
+            "evm.bytecode.object",
+            "evm.bytecode.opcodes",
+            "evm.bytecode.sourceMap",
+            "evm.deployedBytecode.immutableReferences",
+            "evm.deployedBytecode.linkReferences",
+            "evm.deployedBytecode.object",
+            "evm.deployedBytecode.opcodes",
+            "evm.deployedBytecode.sourceMap",
+            "evm.methodIdentifiers"
+          ]
+        }
+      },
+      "remappings": []
+    },
+    "sources": {
+      "project/contracts/Voting.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.24;\r\n\r\ncontract Voting {\r\n    struct Candidate {\r\n        uint id;\r\n        string name;\r\n        uint voteCount;\r\n    }\r\n\r\n    address public owner;\r\n    uint public candidatesCount;\r\n\r\n    mapping(uint => Candidate) public candidates;\r\n    mapping(address => bool) public hasVoted;\r\n\r\n    constructor() {\r\n        owner = msg.sender;\r\n    }\r\n\r\n    function addCandidate(string memory name) public {\r\n        require(msg.sender == owner, \"Only owner\");\r\n        candidatesCount++;\r\n        candidates[candidatesCount] = Candidate(candidatesCount, name, 0);\r\n    }\r\n\r\n    function vote(uint id) public {\r\n        require(!hasVoted[msg.sender], \"Already voted\");\r\n        require(id > 0 && id <= candidatesCount, \"Invalid\");\r\n\r\n        hasVoted[msg.sender] = true;\r\n        candidates[id].voteCount++;\r\n    }\r\n}"
+      }
+    }
+  }
+}
